@@ -1,0 +1,263 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data from PostgreSQL Database</title>
+</head>
+<body>
+    <h1>Calculation Results</h1>
+    <ul>
+        <% data.forEach(row => { %>
+            <li>
+                ID: <%= row.id %>, 
+                Number 1: <%= row.num1 %>, 
+                Number 2: <%= row.num2 %>, 
+                Operation: <%= row.operation %>, 
+                Result: <%= row.result %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li:hover {
+            background-color: #eaeaea;
+        }
+
+        .calculation-info {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .calculation-details {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculation Results</h1>
+        <ul>
+            <% data.forEach(row => { %>
+                <li>
+                    <div class="calculation-info">
+                        <strong>ID:</strong> <%= row.id %><br>
+                        <strong>Operation:</strong> <%= row.operation %><br>
+                    </div>
+                    <div class="calculation-details">
+                        <strong>Number 1:</strong> <%= row.num1 %><br>
+                        <strong>Number 2:</strong> <%= row.num2 %><br>
+                        <strong>Result:</strong> <%= row.result %>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: skyblue;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffe0b2; /* Light orange color */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li:hover {
+            background-color: #ffd280; /* Darker orange color */
+        }
+
+        .calculation-info {
+            font-size: 18px;
+            color: brown;
+            font-weight: bold;
+        }
+
+        .calculation-details {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculation Results</h1>
+        <ul>
+            <% data.forEach(row => { %>
+                <li>
+                    <div class="calculation-info">
+                        <p><strong>ID:</strong> <%= row.id %></p>
+                        <p><strong>Operation:</strong> <%= row.operation %></p>
+                    </div>
+                    <div class="calculation-details">
+                        <p><strong>Number 1:</strong> <%= row.num1 %></p>
+                        <p><strong>Number 2:</strong> <%= row.num2 %></p>
+                        <p><strong>Result:</strong> <%= row.result %></p>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Green color */
+            margin-bottom: 30px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculation-info {
+            font-size: 18px;
+            color: #4CAF50; /* Green color */
+            font-weight: bold;
+        }
+
+        .calculation-details {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculation Results</h1>
+        <ul>
+            <% data.forEach(row => { %>
+                <li>
+                    <div class="calculation-info">
+                        <p><strong>ID:</strong> <%= row.id %></p>
+                        <p><strong>Operation:</strong> <%= row.operation %></p>
+                    </div>
+                    <div class="calculation-details">
+                        <p><strong>Number 1:</strong> <%= row.num1 %></p>
+                        <p><strong>Number 2:</strong> <%= row.num2 %></p>
+                        <p><strong>Result:</strong> <%= row.result %></p>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html> -->

@@ -1,0 +1,13 @@
+/* public/styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100px;
+}
